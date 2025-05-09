@@ -16,7 +16,6 @@ const FloatingElements = () => {
   const [elements, setElements] = useState<FloatingElement[]>([]);
 
   useEffect(() => {
-    // Generate random floating elements
     const shapes = ['circle', 'square', 'triangle'];
     const colors = [
       'rgba(139, 92, 246, 0.2)', // purple

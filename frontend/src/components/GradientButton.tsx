@@ -26,14 +26,12 @@ const GradientButton = ({
   gradientTo = 'to-violet-600',
   ...props
 }: GradientButtonProps) => {
-  // Size classes
   const sizeClasses = {
     sm: 'py-1.5 px-3 text-sm',
     md: 'py-2 px-4 text-base',
     lg: 'py-3 px-6 text-lg',
   };
 
-  // Variant classes
   const variantClasses = {
     solid: `bg-gradient-to-r ${gradientFrom} ${gradientTo} text-white hover:opacity-90`,
     outline: `border-2 border-purple-500 dark:border-purple-400 text-purple-600 dark:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-900/20`,

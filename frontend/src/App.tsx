@@ -10,7 +10,7 @@ import {
    RocketLaunchIcon, PresentationChartLineIcon
 } from '@heroicons/react/24/outline';
 
-// Import components
+
 import Navbar from './components/Navbar';
 import AnimatedBackground from './components/AnimatedBackground';
 import Button from './components/Button';
@@ -54,7 +54,6 @@ function App() {
     document.documentElement.classList.toggle('dark');
   };
 
-  // Check user preference for dark mode
   useEffect(() => {
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
       setIsDarkMode(true);
@@ -69,19 +68,15 @@ function App() {
     }
   };
 
-  const onSubmit = async (data: FormData) => {
+  const onSubmit = async () => {
     setIsSubmitting(true);
     
-    // Simulate processing time
     setTimeout(() => {
-      console.log('Form submitted with data:', data);
       
-      // Show success message and confetti
       setSubmitSuccess(true);
       setShowConfetti(true);
       reset();
       
-      // Hide success message after 5 seconds
       setTimeout(() => {
         setSubmitSuccess(false);
         setShowConfetti(false);
@@ -93,13 +88,11 @@ function App() {
 
   return (
     <div ref={scrollRef} className={`min-h-screen ${isDarkMode ? 'dark bg-gray-900 text-white' : 'bg-white text-gray-800'}`}>
-      {/* Progress Bar */}
       <motion.div 
         className="fixed top-0 left-0 right-0 h-1 bg-purple-500 z-50"
         style={{ scaleX: smoothProgress, transformOrigin: 'left' }}
       />
 
-      {/* Confetti Animation */}
       <AnimatePresence>
         {showConfetti && (
           <motion.div
@@ -119,13 +112,10 @@ function App() {
         )}
       </AnimatePresence>
 
-      {/* Floating Elements Animation */}
       <FloatingElements />
 
-      {/* Navbar with theme toggle */}
       <Navbar isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
 
-      {/* Hero Section */}
       <section id="home" className="relative overflow-hidden min-h-screen flex items-center">
         <AnimatedBackground />
         
@@ -216,7 +206,6 @@ function App() {
           </motion.div>
         </div>
 
-        {/* Scroll down indicator */}
         <motion.div 
           className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
           animate={{ y: [0, 10, 0] }}
@@ -239,7 +228,6 @@ function App() {
         </motion.div>
       </section>
 
-      {/* Stats Section with Parallax */}
       <ParallaxSection id="stats" className="py-24 bg-gray-50 dark:bg-gray-800 relative overflow-hidden">
         <div className="absolute inset-0 opacity-30">
           <div className="absolute right-0 top-0 w-64 h-64 bg-purple-100 dark:bg-purple-800/40 rounded-full -translate-y-1/2 translate-x-1/3 blur-3xl"></div>
@@ -296,7 +284,6 @@ function App() {
         </div>
       </ParallaxSection>
 
-      {/* How It Works Section */}
       <section id="how-it-works" className="py-24 relative overflow-hidden">
         <AnimatedBackground />
         
@@ -314,15 +301,6 @@ function App() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 relative">
-            {/* Connecting line */}
-            {/* <motion.div 
-              initial={{ scaleX: 0, opacity: 0 }}
-              whileInView={{ scaleX: 1, opacity: 1 }}
-              transition={{ duration: 1, delay: 0.5 }}
-              viewport={{ once: true }}
-              className="hidden md:block absolute top-1/3 left-0 right-0 h-2 bg-gradient-to-r from-purple-500 to-violet-500 z-10 rounded-full"
-              style={{ transformOrigin: "left" }}
-            ></motion.div> */}
             
             {[
               {
@@ -387,7 +365,6 @@ function App() {
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
       <section id="why-us" className="py-24 bg-gray-50 dark:bg-gray-800 relative overflow-hidden">
         <div className="absolute inset-0 opacity-30">
           <div className="absolute left-0 top-1/4 w-72 h-72 bg-purple-100 dark:bg-purple-800/40 rounded-full -translate-x-1/2 blur-3xl"></div>
@@ -463,7 +440,6 @@ function App() {
         </div>
       </section>
 
-      {/* Testimonials Section with Carousel */}
       <section id="testimonials" className="py-24 relative overflow-hidden">
         <AnimatedBackground />
         
@@ -515,7 +491,6 @@ function App() {
         </div>
       </section>
 
-      {/* Pricing Section */}
       <section id="pricing" className="py-24 bg-gray-50 dark:bg-gray-800 relative overflow-hidden">
         <div className="absolute inset-0 opacity-30">
           <div className="absolute right-0 top-0 w-72 h-72 bg-purple-100 dark:bg-purple-800/40 rounded-full -translate-y-1/2 translate-x-1/3 blur-3xl"></div>
@@ -539,7 +514,6 @@ function App() {
         </div>
       </section>
 
-      {/* Contact Form Section */}
       <section id="contact" className="py-24 bg-gray-50 dark:bg-gray-800 relative overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-100 dark:bg-purple-800/40 rounded-full translate-y-1/2 translate-x-1/3 blur-3xl"></div>
@@ -680,7 +654,6 @@ function App() {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="py-16 bg-gray-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -767,7 +740,6 @@ function App() {
         </div>
       </footer>
 
-      {/* Chat Widget */}
       <ChatWidget />
     </div>
   );

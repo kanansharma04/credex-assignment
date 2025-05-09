@@ -12,7 +12,6 @@ type Message = {
   createdAt?: Date;
 };
 
-// Predefined Q&A for software licensing
 const predefinedResponses: Record<string, string> = {
   "hello": "Hello! How can I help you with software licensing today?",
   "hi": "Hi there! How can I assist you with software licensing questions today?",
@@ -54,12 +53,10 @@ const ChatWidget = () => {
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   
-  // Scroll to bottom of messages
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
   
-  // Initialize chat when opened
   const initializeChat = () => {
     if (messages.length === 0) {
       setMessages([
@@ -73,19 +70,14 @@ const ChatWidget = () => {
     }
   };
   
-  // Find best response match from predefined answers
   const findResponse = (question: string): string => {
-    // Convert to lowercase for case-insensitive matching
     const normalizedQuestion = question.toLowerCase().trim();
-    
-    // Check for direct matches in our predefined responses
-    for (const [key, response] of Object.entries(predefinedResponses)) {
+        for (const [key, response] of Object.entries(predefinedResponses)) {
       if (normalizedQuestion.includes(key)) {
         return response;
       }
     }
     
-    // If no direct match, return a random default response
     return defaultResponses[Math.floor(Math.random() * defaultResponses.length)];
   };
   
@@ -94,7 +86,6 @@ const ChatWidget = () => {
     
     if (!newMessage.trim() || isLoading) return;
     
-    // Add user message to the chat immediately
     const userMessageId = nanoid();
     const userMessage = {
       id: userMessageId,
@@ -107,12 +98,9 @@ const ChatWidget = () => {
     setNewMessage('');
     setIsLoading(true);
     
-    // Simulate API delay
     setTimeout(() => {
-      // Find response based on user's message
       const responseContent = findResponse(userMessage.content);
       
-      // Add AI response
       setMessages(prev => [
         ...prev,
         {
@@ -124,7 +112,7 @@ const ChatWidget = () => {
       ]);
       
       setIsLoading(false);
-    }, 1000); // Simulate 1 second delay for realistic effect
+    }, 1000); 
   };
   
   const toggleChat = () => {
@@ -138,7 +126,6 @@ const ChatWidget = () => {
   
   return (
     <div className="fixed bottom-4 right-4 z-50">
-      {/* Chat toggle button */}
       <motion.button
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
@@ -149,7 +136,6 @@ const ChatWidget = () => {
         <ChatBubbleLeftRightIcon className="h-6 w-6" />
       </motion.button>
       
-      {/* Chat window */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -158,7 +144,6 @@ const ChatWidget = () => {
             exit={{ opacity: 0, y: 20, scale: 0.9 }}
             className="absolute bottom-16 right-0 w-80 sm:w-96 h-[30rem] bg-white dark:bg-gray-800 rounded-lg shadow-xl overflow-hidden flex flex-col"
           >
-            {/* Chat header */}
             <div className="gradient-bg text-white p-4 flex justify-between items-center">
               <h3 className="font-bold">SoftSell Assistant</h3>
               <button onClick={toggleChat} className="text-white">
@@ -166,7 +151,6 @@ const ChatWidget = () => {
               </button>
             </div>
             
-            {/* Chat messages */}
             <div className="flex-1 overflow-y-auto p-4 space-y-4">
               {messages.map((message) => (
                 <motion.div
@@ -236,7 +220,6 @@ const ChatWidget = () => {
               <div ref={messagesEndRef} />
             </div>
             
-            {/* Chat input */}
             <form onSubmit={handleSendMessage} className="p-3 border-t dark:border-gray-700 flex">
               <input
                 type="text"

@@ -33,7 +33,6 @@ const Navbar = ({ isDarkMode, toggleDarkMode }: NavbarProps) => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Logo & Brand */}
           <motion.div 
             className="flex items-center"
             whileHover={{ scale: 1.02 }}
@@ -57,13 +56,11 @@ const Navbar = ({ isDarkMode, toggleDarkMode }: NavbarProps) => {
             </div>
           </motion.div>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <NavLinks />
             <ThemeToggle isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
           </div>
 
-          {/* Mobile Menu Button */}
           <div className="flex items-center md:hidden">
             <ThemeToggle isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
             <button
@@ -80,7 +77,6 @@ const Navbar = ({ isDarkMode, toggleDarkMode }: NavbarProps) => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div

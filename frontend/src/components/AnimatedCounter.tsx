@@ -41,10 +41,8 @@ const AnimatedCounter = ({
         }
       };
 
-      // Start animation
       animationFrame = requestAnimationFrame(countUp);
 
-      // Cleanup
       return () => {
         if (animationFrame) {
           cancelAnimationFrame(animationFrame);
@@ -53,7 +51,6 @@ const AnimatedCounter = ({
     }
   }, [inView, end, duration]);
 
-  // Easing function for smoother counting
   const easeOutCubic = (x: number): number => 1 - Math.pow(1 - x, 3);
 
   return (
