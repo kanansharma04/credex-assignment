@@ -24,8 +24,8 @@ const ParallaxSection = ({ id, children, className = '' }: ParallaxSectionProps)
         style={{ opacity, y }}
         className="absolute inset-0 w-full h-full"
       >
-        <div className="absolute -top-20 -right-20 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-violet-500/20 rounded-full blur-3xl"></div>
+        <div className="absolute -top-20 -right-20 w-64 h-64 bg-green-500/20 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-emerald-500/20 rounded-full blur-3xl"></div>
       </motion.div>
       <div className="relative z-10">{children}</div>
     </section>

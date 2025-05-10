@@ -54,7 +54,7 @@ const TestimonialCarousel = ({ testimonials }: TestimonialCarouselProps) => {
 
   return (
     <div className="relative">
-      <div className="overflow-hidden rounded-2xl bg-white dark:bg-gray-700 shadow-xl">
+      <div className="overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-xl">
         <div className="relative h-full">
           <AnimatePresence custom={direction} mode="wait">
             <motion.div
@@ -70,7 +70,7 @@ const TestimonialCarousel = ({ testimonials }: TestimonialCarouselProps) => {
               <div className="flex flex-col md:flex-row items-center gap-8">
                 <div className="w-full md:w-1/3">
                   <div className="relative w-28 h-28 mx-auto">
-                    <div className="absolute inset-0 rounded-full bg-gradient-to-br from-purple-400 to-violet-600 blur-sm" />
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-br from-green-400 to-emerald-600 blur-sm" />
                     <img 
                       src={testimonials[current].image} 
                       alt={testimonials[current].author}
@@ -80,7 +80,7 @@ const TestimonialCarousel = ({ testimonials }: TestimonialCarouselProps) => {
                   <div className="mt-4 text-center">
                     <div className="flex justify-center mb-2">
                       {[...Array(5)].map((_, i) => (
-                        <StarIcon key={i} className="h-5 w-5 text-yellow-400" />
+                        <StarIcon key={i} className="h-5 w-5 text-green-400" />
                       ))}
                     </div>
                     <h4 className="font-bold text-lg">{testimonials[current].author}</h4>
@@ -91,7 +91,7 @@ const TestimonialCarousel = ({ testimonials }: TestimonialCarouselProps) => {
                 <div className="w-full md:w-2/3">
                   <div className="relative">
                     <svg 
-                      className="absolute -top-6 -left-6 h-12 w-12 text-purple-200 dark:text-purple-700 opacity-50" 
+                      className="absolute -top-6 -left-6 h-12 w-12 text-green-200 dark:text-green-700 opacity-50" 
                       fill="currentColor" 
                       viewBox="0 0 32 32"
                     >
@@ -112,8 +112,8 @@ const TestimonialCarousel = ({ testimonials }: TestimonialCarouselProps) => {
                 key={index}
                 className={`h-2 w-2 rounded-full transition-all duration-300 ${
                   index === current 
-                    ? 'bg-purple-600 w-6' 
-                    : 'bg-purple-300 dark:bg-purple-700'
+                    ? 'bg-green-600 w-6' 
+                    : 'bg-green-300 dark:bg-green-700'
                 }`}
                 onClick={() => {
                   setDirection(index > current ? 1 : -1);
@@ -128,18 +128,18 @@ const TestimonialCarousel = ({ testimonials }: TestimonialCarouselProps) => {
       
       <button
         onClick={() => navigate(-1)}
-        className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white dark:bg-gray-700 p-2 rounded-full shadow-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors"
+        className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white dark:bg-gray-800 p-2 rounded-full shadow-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
         aria-label="Previous testimonial"
       >
-        <ChevronLeftIcon className="h-6 w-6 text-purple-600 dark:text-purple-400" />
+        <ChevronLeftIcon className="h-6 w-6 text-green-600 dark:text-green-400" />
       </button>
       
       <button
         onClick={() => navigate(1)}
-        className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white dark:bg-gray-700 p-2 rounded-full shadow-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors"
+        className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white dark:bg-gray-800 p-2 rounded-full shadow-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
         aria-label="Next testimonial"
       >
-        <ChevronRightIcon className="h-6 w-6 text-purple-600 dark:text-purple-400" />
+        <ChevronRightIcon className="h-6 w-6 text-green-600 dark:text-green-400" />
       </button>
     </div>
   );

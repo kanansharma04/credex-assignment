@@ -4,32 +4,36 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
         primary: {
-          400: '#a78bfa',  // violet-400
-          500: '#8b5cf6',  // violet-500
-          600: '#7c3aed',  // violet-600
-          700: '#6d28d9',  // violet-700
-          800: '#5b21b6',  // violet-800
-          900: '#4c1d95'   // violet-900
+          400: '#4ade80',  // green-400
+          500: '#22c55e',  // green-500
+          600: '#16a34a',  // green-600
+          700: '#15803d',  // green-700
+          800: '#166534',  // green-800
+          900: '#14532d'   // green-900
         },
         secondary: {
-          100: '#f5f3ff',  // violet-50
-          400: '#c4b5fd',  // violet-300
+          100: '#dcfce7',  // green-100
+          400: '#4ade80',  // green-400
         },
         accent: {
-          DEFAULT: '#e11d48',  // rose-600
-          light: '#fb7185',    // rose-400
-          dark: '#be123c',     // rose-700
+          DEFAULT: '#16a34a',  // green-600
+          light: '#22c55e',    // green-500
+          dark: '#15803d',     // green-700
         },
         lavender: {
-          100: '#ede9fe',
-          400: '#c4b5fd',
-          600: '#7c3aed',
-          800: '#5b21b6'
+          100: '#f0fdf4',  // green-50
+          400: '#4ade80',  // green-400
+          600: '#16a34a',  // green-600
+          800: '#166534'   // green-800
         }
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       }
     }
   },

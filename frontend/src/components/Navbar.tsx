@@ -24,10 +24,9 @@ const Navbar = ({ isDarkMode, toggleDarkMode }: NavbarProps) => {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-md py-3'
+          ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-lg py-3'
           : 'bg-transparent py-5'
       }`}
     >
@@ -37,10 +36,10 @@ const Navbar = ({ isDarkMode, toggleDarkMode }: NavbarProps) => {
             className="flex items-center"
             whileHover={{ scale: 1.02 }}
           >
-            <span className="flex items-center justify-center w-10 h-10 mr-3 rounded-full bg-gradient-to-r from-primary-500 to-primary-700">
+            <span className="flex items-center justify-center w-10 h-10 mr-3 rounded-full bg-gradient-to-r from-green-500 to-green-700">
               <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6 text-white">
                 <path
-                  d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+                  d="M20.5 6.5L12 2L3.5 6.5M20.5 6.5L12 11M20.5 6.5V17.5L12 22M12 11L3.5 6.5M12 11V22M3.5 6.5V17.5L12 22"
                   stroke="currentColor"
                   strokeWidth="2"
                   strokeLinecap="round"
@@ -49,10 +48,10 @@ const Navbar = ({ isDarkMode, toggleDarkMode }: NavbarProps) => {
               </svg>
             </span>
             <div className="flex flex-col">
-              <span className="text-xl font-bold tracking-tight bg-gradient-to-r from-primary-500 to-accent-default bg-clip-text text-transparent dark:from-primary-400 dark:to-accent-light">
-                SoftSell
+              <span className="text-xl font-bold tracking-tight bg-gradient-to-r from-green-500 to-green-700 bg-clip-text text-transparent dark:from-green-400 dark:to-green-600">
+                SoftShell
               </span>
-              <span className="text-xs text-gray-600 dark:text-gray-300">License Marketplace</span>
+              <span className="text-xs text-gray-600 dark:text-gray-300">License Exchange</span>
             </div>
           </motion.div>
 
@@ -110,7 +109,7 @@ const NavLinks = ({ mobile = false, onClick = () => {} }: { mobile?: boolean; on
         <motion.a
           key={link.name}
           href={link.href}
-          className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors"
+          className="text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 font-medium transition-colors"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           onClick={onClick}
@@ -149,7 +148,7 @@ const ThemeToggle = ({ isDarkMode, toggleDarkMode }: { isDarkMode: boolean; togg
             exit={{ opacity: 0, rotate: -90 }}
             transition={{ duration: 0.3 }}
           >
-            <MoonIcon className="h-5 w-5 text-primary-700" />
+            <MoonIcon className="h-5 w-5 text-green-700" />
           </motion.div>
         )}
       </AnimatePresence>

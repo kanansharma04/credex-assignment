@@ -1,8 +1,8 @@
-# CredEx - Credit Exchange Platform
+# SoftShell - Software License Exchange Platform
 
 ## Overview
 
-CredEx is a modern credit exchange platform designed to streamline the process of credit management and transactions. This frontend application provides an intuitive user interface for accessing and managing credit-related operations.
+SoftShell is a modern software license exchange platform designed to streamline the process of software license management and transactions. This frontend application provides an intuitive user interface for accessing and managing license-related operations.
 
 ## Features
 
@@ -108,8 +108,8 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Contact
 
-Project Link: [https://github.com/yourusername/credex](https://github.com/yourusername/credex)
+Project Link: [https://github.com/yourusername/softshell](https://github.com/yourusername/softshell)
 
 ---
 
-© 2023 CredEx. All Rights Reserved.
+© 2023 SoftShell. All Rights Reserved.

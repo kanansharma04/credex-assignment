@@ -29,9 +29,9 @@ const Button = ({
   
   const variantClasses = {
     primary: 'gradient-bg text-white shadow-glow hover:shadow-glow-lg',
-    secondary: 'bg-secondary-100 text-primary-700 hover:bg-secondary-200 dark:bg-primary-900/50 dark:text-primary-300 dark:hover:bg-primary-900/70',
-    outline: 'border-2 border-primary-500 text-primary-600 hover:bg-primary-50 dark:border-primary-400 dark:text-primary-400 dark:hover:bg-primary-900/30',
-    ghost: 'text-primary-600 hover:bg-primary-50 dark:text-primary-400 dark:hover:bg-primary-900/30',
+    secondary: 'bg-green-100 text-green-700 hover:bg-green-200 dark:bg-green-900/50 dark:text-green-300',
+    outline: 'border-2 border-green-500 text-green-600 hover:bg-green-50 dark:border-green-400 dark:text-green-400',
+    ghost: 'text-green-600 hover:bg-green-50 dark:text-green-400 dark:hover:bg-green-900/30',
   };
   
   const sizeClasses = {

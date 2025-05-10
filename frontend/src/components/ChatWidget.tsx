@@ -15,7 +15,7 @@ type Message = {
 const predefinedResponses: Record<string, string> = {
   "hello": "Hello! How can I help you with software licensing today?",
   "hi": "Hi there! How can I assist you with software licensing questions today?",
-  "hey": "Hey! Welcome to SoftSell. How can I help you with software licensing?",
+  "hey": "Hey! Welcome to SoftShell. How can I help you with software licensing?",
   
   "what types of software licenses can i resell": "You can typically resell perpetual licenses for Microsoft, Adobe, Oracle, SAP, and many other software products. Volume licensing agreements, OEM licenses, and subscription services have different resale rules.",
   
@@ -129,7 +129,7 @@ const ChatWidget = () => {
       <motion.button
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className="gradient-bg text-white p-4 rounded-full shadow-glow"
+        className="bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-200 p-4 rounded-full shadow-glow"
         onClick={toggleChat}
         aria-label="Open chat"
       >
@@ -144,9 +144,9 @@ const ChatWidget = () => {
             exit={{ opacity: 0, y: 20, scale: 0.9 }}
             className="absolute bottom-16 right-0 w-80 sm:w-96 h-[30rem] bg-white dark:bg-gray-800 rounded-lg shadow-xl overflow-hidden flex flex-col"
           >
-            <div className="gradient-bg text-white p-4 flex justify-between items-center">
-              <h3 className="font-bold">SoftSell Assistant</h3>
-              <button onClick={toggleChat} className="text-white">
+            <div className="bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-200 p-4 flex justify-between items-center">
+              <h3 className="font-bold">SoftShell Assistant</h3>
+              <button onClick={toggleChat} className="text-green-600 dark:text-green-400">
                 <XMarkIcon className="h-5 w-5" />
               </button>
             </div>
@@ -232,7 +232,7 @@ const ChatWidget = () => {
               <button
                 type="submit"
                 disabled={isLoading || !newMessage.trim()}
-                className="gradient-bg text-white p-2 rounded-r-md disabled:opacity-50"
+                className="bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-200 p-2 rounded-r-md disabled:opacity-50"
               >
                 <PaperAirplaneIcon className="h-5 w-5" />
               </button>

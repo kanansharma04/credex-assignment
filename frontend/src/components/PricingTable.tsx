@@ -23,8 +23,8 @@ const PricingTable = () => {
       ],
       buttonText: 'Get Started',
       popular: false,
-      gradientFrom: 'from-purple-500',
-      gradientTo: 'to-indigo-500',
+      gradientFrom: 'from-green-500',
+      gradientTo: 'to-emerald-500',
     },
     {
       name: 'Professional',
@@ -42,8 +42,8 @@ const PricingTable = () => {
       ],
       buttonText: 'Get Started',
       popular: true,
-      gradientFrom: 'from-purple-600',
-      gradientTo: 'to-fuchsia-600',
+      gradientFrom: 'from-green-600',
+      gradientTo: 'to-emerald-600',
     },
     {
       name: 'Enterprise',
@@ -61,8 +61,8 @@ const PricingTable = () => {
       ],
       buttonText: 'Contact Sales',
       popular: false,
-      gradientFrom: 'from-violet-600',
-      gradientTo: 'to-purple-600',
+      gradientFrom: 'from-emerald-600',
+      gradientTo: 'to-green-600',
     },
   ];
   
@@ -74,8 +74,8 @@ const PricingTable = () => {
             onClick={() => setIsAnnual(false)}
             className={`py-2 px-4 rounded-full text-sm font-medium transition-colors ${
               !isAnnual 
-                ? 'bg-purple-100 dark:bg-purple-900/50 text-purple-800 dark:text-purple-200' 
-                : 'text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400'
+                ? 'bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-200' 
+                : 'text-gray-600 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400'
             }`}
           >
             Monthly
@@ -84,11 +84,11 @@ const PricingTable = () => {
             onClick={() => setIsAnnual(true)}
             className={`py-2 px-4 rounded-full text-sm font-medium transition-colors ${
               isAnnual 
-                ? 'bg-purple-100 dark:bg-purple-900/50 text-purple-800 dark:text-purple-200' 
-                : 'text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400'
+                ? 'bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-200' 
+                : 'text-gray-600 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400'
             }`}
           >
-            Annual <span className="text-xs text-purple-500 dark:text-purple-400 ml-1">Save 25%</span>
+            Annual <span className="text-xs text-green-500 dark:text-green-400 ml-1">Save 25%</span>
           </button>
         </div>
       </div>

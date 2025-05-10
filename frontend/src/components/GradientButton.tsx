@@ -22,8 +22,8 @@ const GradientButton = ({
   isLoading = false,
   fullWidth = false,
   className = '',
-  gradientFrom = 'from-purple-600',
-  gradientTo = 'to-violet-600',
+  gradientFrom = 'from-green-500',
+  gradientTo = 'to-green-600',
   ...props
 }: GradientButtonProps) => {
   const sizeClasses = {

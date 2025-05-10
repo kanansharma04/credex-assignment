@@ -18,11 +18,11 @@ const FloatingElements = () => {
   useEffect(() => {
     const shapes = ['circle', 'square', 'triangle'];
     const colors = [
-      'rgba(139, 92, 246, 0.2)', // purple
-      'rgba(167, 139, 250, 0.2)', // violet
-      'rgba(196, 181, 253, 0.2)', // lavender
-      'rgba(124, 58, 237, 0.2)', // deep purple
-      'rgba(217, 70, 239, 0.2)', // fuchsia
+      'rgba(34, 197, 94, 0.2)',  // green-500
+      'rgba(22, 163, 74, 0.2)',  // green-600
+      'rgba(21, 128, 61, 0.2)',  // green-700
+      'rgba(74, 222, 128, 0.2)', // green-400
+      'rgba(16, 185, 129, 0.2)', // emerald-500
     ];
     
     const newElements: FloatingElement[] = [];
